@@ -1,0 +1,53 @@
+li {
+  list-style: none;
+  /* color: #022c22; */
+}
+
+a {
+  appearance: none;
+  text-decoration: none;
+  color: inherit;
+}
+
+a:active {
+  color: inherit;
+}
+
+/* ListItem a {
+  appearance: none;
+  text-decoration: none;
+} */
+
+.sidebar {
+  background-color: var(--sidebar-background);
+  padding: 12rem 1rem 0.5rem;
+  width: 25rem;
+}
+
+Nav ul {
+  display: flex;
+  flex-direction: column;
+  gap: 1.8rem;
+  padding: 2rem 0rem;
+  border-top: 0.05rem solid #022c22;
+  border-bottom: 0.05rem solid #022c22;
+}
+
+.nav-item {
+  display: flex;
+  gap: 1rem;
+  font-size: 1.7rem;
+  align-items: center;
+  border-radius: 1rem;
+  padding: 0.2rem 1rem;
+  transition: scale 200ms ease-in-out;
+}
+
+.nav-item:hover {
+  background-color: var(--sidebar-hover);
+  cursor: pointer;
+}
+
+.nav-item:active {
+  transform: scale(0.98);
+}
