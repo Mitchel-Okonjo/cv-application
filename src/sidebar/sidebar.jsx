@@ -11,9 +11,9 @@ import {
   mdiBrain,
 } from "@mdi/js";
 
-const Sidebar = () => {
+const Sidebar = ({ isOpen }) => {
   return (
-    <nav className='sidebar'>
+    <nav className={isOpen ? "sidebar active" : "sidebar"}>
       <Nav />
     </nav>
   );

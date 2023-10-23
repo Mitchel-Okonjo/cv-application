@@ -1,0 +1,48 @@
+.menu {
+  position: fixed;
+  top: 3rem;
+  left: 2rem;
+  width: max-content;
+  display: none;
+  flex-direction: column;
+  background: none;
+  border: none;
+  outline: 2px solid inherit;
+  gap: var(--bar-gap);
+  z-index: 2;
+}
+
+.menu:hover {
+  cursor: pointer;
+}
+
+.menu > * {
+  --x-width: calc(var(--nav-height) * 1.41421356237);
+  width: var(--bar-width);
+  height: var(--bar-height);
+  background-color: #022c22;
+  border-radius: 9999px;
+  transform-origin: left center;
+  transition: all var(--animation-timing);
+}
+
+.menu > *:hover {
+  cursor: pointer;
+}
+
+.menu .rotate-right {
+  rotate: 45deg;
+  width: var(--x-width);
+  transform: translateY(-100%);
+}
+
+.menu .vanish {
+  opacity: 0;
+  width: 0;
+}
+
+.menu .rotate-left {
+  rotate: -45deg;
+  width: var(--x-width);
+  transform: translateY(100%);
+}

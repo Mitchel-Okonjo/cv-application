@@ -1,6 +1,5 @@
 li {
   list-style: none;
-  /* color: #022c22; */
 }
 
 a {
@@ -12,11 +11,6 @@ a {
 a:active {
   color: inherit;
 }
-
-/* ListItem a {
-  appearance: none;
-  text-decoration: none;
-} */
 
 .sidebar {
   background-color: var(--sidebar-background);
