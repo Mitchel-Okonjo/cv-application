@@ -14,7 +14,7 @@
   --sidebar-active: #cbd5e1;
   --bar-height: 0.5rem;
   --bar-width: 3rem;
-  --bar-gap: 0.2rem;
+  --bar-gap: 0.3rem;
   --nav-height: calc((var(--bar-height) * 3) + (var(--bar-gap) * 3));
   --animation-timing: 200ms ease-in-out;
 }
@@ -31,7 +31,7 @@ body {
   background-color: var(--body-background);
 }
 
-@media (max-width: 800px) {
+@media (max-width: 1400px) {
   .sidebar {
     background-color: var(--sidebar-background);
     padding: 12rem 1rem 0.5rem;
