@@ -33,7 +33,7 @@
 .menu .rotate-right {
   rotate: 45deg;
   width: var(--x-width);
-  transform: translateY(-100%);
+  transform: translateY(-110%);
 }
 
 .menu .vanish {
@@ -44,5 +44,5 @@
 .menu .rotate-left {
   rotate: -45deg;
   width: var(--x-width);
-  transform: translateY(100%);
+  transform: translateY(110%);
 }

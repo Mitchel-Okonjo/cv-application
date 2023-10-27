@@ -2,11 +2,6 @@ import { useState } from "react";
 import "./navBtn.css";
 
 const NavBtn = ({ onClick, isOpen }) => {
-  //   const [isClicked, setIsClicked] = useState(false);
-
-  //   const handleClick = () => {
-  //     setIsClicked(!isClicked);
-  //   };
   const barStyle = {
     backgroundColor: isOpen ? "#022c22" : "#f1f5f9",
   };

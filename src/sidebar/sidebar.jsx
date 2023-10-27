@@ -11,59 +11,57 @@ import {
   mdiBrain,
 } from "@mdi/js";
 
-const Sidebar = ({ isOpen }) => {
+const Sidebar = ({ isOpen, onClick, activeIndex }) => {
   return (
     <nav className={isOpen ? "sidebar active" : "sidebar"}>
-      <Nav />
+      <Nav onClick={onClick} activeIndex={activeIndex} />
     </nav>
   );
 };
 
-const Nav = () => {
-  const [activeIndex, setActiveIndex] = useState(0);
-
+const Nav = ({ onClick, activeIndex }) => {
   return (
     <ul>
       <ListItem
         icon={mdiAccount}
         title='Personal Details'
-        onClick={() => setActiveIndex(0)}
+        onClick={() => onClick(0)}
         isActive={activeIndex === 0}
       />
       <ListItem
         icon={mdiLinkVariant}
         title='Links'
-        onClick={() => setActiveIndex(1)}
+        onClick={() => onClick(1)}
         isActive={activeIndex === 1}
       />
       <ListItem
         icon={mdiBrain}
         title='Skills'
-        onClick={() => setActiveIndex(2)}
+        onClick={() => onClick(2)}
         isActive={activeIndex === 2}
       />
       <ListItem
         icon={mdiBriefcase}
         title='Work Experience'
-        onClick={() => setActiveIndex(3)}
+        onClick={() => onClick(3)}
         isActive={activeIndex === 3}
       />
       <ListItem
         icon={mdiFolder}
         title='Projects'
-        onClick={() => setActiveIndex(4)}
+        onClick={() => onClick(4)}
         isActive={activeIndex === 4}
       />
       <ListItem
         icon={mdiSchool}
         title='Education'
-        onClick={() => setActiveIndex(5)}
+        onClick={() => onClick(5)}
         isActive={activeIndex === 5}
       />
       <ListItem
         icon={mdiCertificate}
         title='Certifications'
-        onClick={() => setActiveIndex(6)}
+        onClick={() => onClick(6)}
         isActive={activeIndex === 6}
       />
     </ul>
@@ -103,4 +101,4 @@ const ListItem = ({ icon, title, onClick, isActive }) => {
   );
 };
 
-export default Sidebar;
+export { Sidebar };
