@@ -4,7 +4,15 @@ import { PersonalDetails } from "../pages/personal";
 import { Links } from "../pages/links";
 import { Button } from "../pages/tools";
 
-const Form = ({ heading, activeIndex, onClick }) => {
+const Form = ({
+  heading,
+  activeIndex,
+  onClick,
+  handleInputChange,
+  personalValues,
+  links,
+  handleLinksChange,
+}) => {
   return (
     <section className='form-section'>
       <div className='form-header'>
@@ -27,8 +35,15 @@ const Form = ({ heading, activeIndex, onClick }) => {
         </div>
       </div>
       <form className='form'>
-        {activeIndex === 0 && <PersonalDetails />}
-        {activeIndex === 1 && <Links />}
+        {activeIndex === 0 && (
+          <PersonalDetails
+            handleInputChange={handleInputChange}
+            inputValues={personalValues}
+          />
+        )}
+        {activeIndex === 1 && (
+          <Links links={links} handleLinksChange={handleLinksChange} />
+        )}
         {/* {activeIndex === 2 && <Skills />}
         {activeIndex === 3 && <WorkExperience />}
         {activeIndex === 4 && <Projects />}
