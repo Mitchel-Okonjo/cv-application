@@ -12,6 +12,32 @@ function App() {
   const [activeIndex, setActiveIndex] = useState(0);
   const [formHeading, setFormHeading] = useState("Personal Details");
 
+  const [personalValues, setPersonalValues] = useState({
+    fullName: "",
+    jobTitle: "",
+    email: "",
+    phone: "",
+    address: "",
+    summary: "",
+  });
+
+  const [links, setLinks] = useState({
+    websiteUrl: "",
+    websiteText: "",
+    linkedinUrl: "",
+    linkedinText: "",
+    githubUrl: "",
+    githubText: "",
+  });
+
+  const handleLinksChange = (obj) => {
+    setLinks(obj);
+  };
+
+  const handleInputChange = (obj) => {
+    setPersonalValues(obj);
+  };
+
   const handleMenuClick = () => {
     setIsSidebarOpen(!isSidebarOpen);
   };
@@ -59,6 +85,10 @@ function App() {
         heading={formHeading}
         activeIndex={activeIndex}
         onClick={changeNav}
+        handleInputChange={handleInputChange}
+        personalValues={personalValues}
+        links={links}
+        handleLinksChange={handleLinksChange}
       />
       <Livesheet />
     </>
