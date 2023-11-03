@@ -9,13 +9,10 @@ const Input = ({
   placeholder,
   comment = "",
   className = "",
+  handleChange,
+  value,
+  field,
 }) => {
-  const [value, setValue] = useState("");
-
-  const handleChange = (value) => {
-    setValue(value);
-  };
-
   return (
     <label htmlFor={id}>
       {label}
@@ -26,19 +23,23 @@ const Input = ({
         id={id}
         value={value}
         placeholder={placeholder}
-        onChange={(event) => handleChange(event.target.value)}
+        onChange={(event) => handleChange(field, event.target.value)}
       />
     </label>
   );
 };
 
-const TextArea = ({ label, id, rows, cols, placeholder, comment = "" }) => {
-  const [value, setValue] = useState("");
-
-  const handleChange = (value) => {
-    setValue(value);
-  };
-
+const TextArea = ({
+  label,
+  id,
+  rows,
+  cols,
+  placeholder,
+  comment = "",
+  handleChange,
+  value,
+  field,
+}) => {
   return (
     <label htmlFor={id}>
       {label}
@@ -49,7 +50,7 @@ const TextArea = ({ label, id, rows, cols, placeholder, comment = "" }) => {
         rows={rows}
         cols={cols}
         placeholder={placeholder}
-        onChange={(event) => handleChange(event.target.value)}
+        onChange={(event) => handleChange(field, event.target.value)}
       />
     </label>
   );
