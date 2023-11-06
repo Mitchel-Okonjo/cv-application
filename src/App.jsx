@@ -11,6 +11,7 @@ function App() {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
   const [activeIndex, setActiveIndex] = useState(0);
   const [formHeading, setFormHeading] = useState("Personal Details");
+  const [skillsIndex, setSkillsIndex] = useState(0);
 
   const [personalValues, setPersonalValues] = useState({
     fullName: "",
@@ -29,6 +30,18 @@ function App() {
     githubUrl: "",
     githubText: "",
   });
+
+  const [skillsAndLang, setSkillsAndLang] = useState([
+    {
+      id: "skills",
+      skills: ["", "", ""],
+    },
+
+    {
+      id: "languages",
+      languages: ["", "", ""],
+    },
+  ]);
 
   const handleLinksChange = (obj) => {
     setLinks(obj);
@@ -89,6 +102,10 @@ function App() {
         personalValues={personalValues}
         links={links}
         handleLinksChange={handleLinksChange}
+        skillsAndLang={skillsAndLang}
+        setSkillsAndLang={setSkillsAndLang}
+        skillsIndex={skillsIndex}
+        setSkillsIndex={setSkillsIndex}
       />
       <Livesheet />
     </>
