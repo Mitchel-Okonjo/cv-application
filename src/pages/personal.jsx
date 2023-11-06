@@ -16,21 +16,19 @@ const PersonalDetails = ({ inputValues, handleInputChange }) => {
           label='Full Name'
           type='text'
           id='fullName'
-          field='fullName'
           placeholder='John Doe'
           comment='required'
           value={inputValues["fullName"]}
-          handleChange={handleChange}
+          handleChange={(e) => handleChange("fullName", e.target.value)}
         />
         <Input
           label='Job Title'
           type='text'
           id='jobTitle'
-          field='jobTitle'
           placeholder='Software Engineer'
           comment='recommended'
           value={inputValues["jobTitle"]}
-          handleChange={handleChange}
+          handleChange={(e) => handleChange("jobTitle", e.target.value)}
         />
       </div>
       <div>
@@ -38,43 +36,39 @@ const PersonalDetails = ({ inputValues, handleInputChange }) => {
           label='Email'
           type='email'
           id='email'
-          field='email'
           placeholder='someone@example.com'
           comment='recommended'
           value={inputValues["email"]}
-          handleChange={handleChange}
+          handleChange={(e) => handleChange("email", e.target.value)}
         />
         <Input
           label='Phone'
           type='tel'
           id='phone'
-          field='phone'
           placeholder='07050751423'
           comment='optional'
           value={inputValues["phone"]}
-          handleChange={handleChange}
+          handleChange={(e) => handleChange("phone", e.target.value)}
         />
       </div>
       <Input
         label='Adress'
         type='text'
         id='address'
-        field='address'
         placeholder='Long Island, New York'
         comment='optional'
         value={inputValues["address"]}
-        handleChange={handleChange}
+        handleChange={(e) => handleChange("address", e.target.value)}
       />
       <TextArea
         label='Summary'
         id='summary'
-        field='summary'
         rows={10}
         cols={50}
         placeholder='something'
         comment='recommended'
         value={inputValues["summary"]}
-        handleChange={handleChange}
+        handleChange={(e) => handleChange("summary", e.target.value)}
       />
     </div>
   );

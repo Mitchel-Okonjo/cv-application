@@ -15,21 +15,19 @@ const Links = ({ links, handleLinksChange }) => {
           label='Website'
           type='text'
           id='website-url'
-          field='websiteUrl'
           placeholder='https://www.johndoe.com'
           comment='recommended'
           value={links["websiteUrl"]}
-          handleChange={handleChange}
+          handleChange={(e) => handleChange("websiteUrl", e.target.value)}
         />
         <Input
           label='Text'
           type='text'
           id='website-text'
-          field='websiteText'
           placeholder='johndoe.com'
           comment='optional'
           value={links["websiteText"]}
-          handleChange={handleChange}
+          handleChange={(e) => handleChange("websiteText", e.target.value)}
         />
       </div>
       <div>
@@ -37,21 +35,19 @@ const Links = ({ links, handleLinksChange }) => {
           label='LinkedIn'
           type='text'
           id='linkedIn-url'
-          field='linkedinUrl'
           placeholder='https://www.linkedin.com/'
           comment='recommended'
           value={links["linkedinUrl"]}
-          handleChange={handleChange}
+          handleChange={(e) => handleChange("linkedinUrl", e.target.value)}
         />
         <Input
           label='Text'
           type='text'
           id='linkedin-text'
-          field='linkedinText'
           placeholder='john-doe'
           comment='optional'
           value={links["linkedinText"]}
-          handleChange={handleChange}
+          handleChange={(e) => handleChange("linkedinText", e.target.value)}
         />
       </div>
       <div>
@@ -59,21 +55,19 @@ const Links = ({ links, handleLinksChange }) => {
           label='GitHub'
           type='text'
           id='github-url'
-          field='githubUrl'
           placeholder='https://www.github.com/john-doe'
           comment='recommended'
           value={links["githubUrl"]}
-          handleChange={handleChange}
+          handleChange={(e) => handleChange("githubUrl", e.target.value)}
         />
         <Input
           label='Text'
           type='text'
           id='github-text'
-          field='githubText'
           placeholder='john-doe'
           comment='optional'
           value={links["githubText"]}
-          handleChange={handleChange}
+          handleChange={(e) => handleChange("githubText", e.target.value)}
         />
       </div>
     </div>
