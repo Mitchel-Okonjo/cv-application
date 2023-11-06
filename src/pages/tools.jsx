@@ -122,8 +122,8 @@ const NormalButton = ({
     padding: "0.8rem 2rem",
     border: "none",
     width: "max-content",
-    "align-items": "center",
-    "border-radius": "0.5rem",
+    alignItems: "center",
+    borderRadius: "0.5rem",
   };
   return (
     <button
