@@ -142,7 +142,7 @@ const Work = ({ work, workIndex, setWork, setWorkIndex }) => {
         </div>
       </div>
 
-      <div className='body'>
+      <div className='work-body'>
         <div>
           <Input
             label='Company Name'

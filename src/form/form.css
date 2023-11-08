@@ -137,14 +137,14 @@ textarea:focus {
 /* Work experience section */
 
 .work,
-.work .body {
+.body {
   display: flex;
   flex-direction: column;
   gap: 1rem;
 }
 
-.body div:nth-child(1),
-.body div:nth-child(2) {
+.work-body div:nth-child(1),
+.work-body div:nth-child(2) {
   display: flex;
   gap: 2rem;
 }
@@ -168,6 +168,7 @@ textarea:focus {
 
 .add-bullet {
   align-self: center;
+  margin-top: 2rem;
 }
 
 .page-btns button#add-page,
@@ -182,8 +183,4 @@ textarea:focus {
 .remove {
   padding: 0.7rem 1.5rem;
   border-radius: 0.5rem;
-}
-
-.add-bullet {
-  margin-top: 2rem;
 }
