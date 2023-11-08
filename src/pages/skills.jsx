@@ -47,7 +47,7 @@ const Skills = ({
   return (
     <div className='skills'>
       <div className='sub-header'>
-        <h1>{currentPage}</h1>
+        <h2>{currentPage}</h2>
         <div className='page-btns'>
           <PageButton
             className='page-navigation'
@@ -79,7 +79,7 @@ const Skills = ({
 
       <NormalButton
         className='add-more'
-        content={`Add ${currentPage}`}
+        content='Add'
         type='button'
         visibility='flex'
         color='white'

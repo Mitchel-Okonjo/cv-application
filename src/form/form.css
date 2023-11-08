@@ -129,7 +129,7 @@ textarea:focus {
 
 .skills .add-more {
   margin-top: 2rem;
-  align-self: flex-start;
+  align-self: center;
   gap: 1rem;
   font-size: 1.8rem;
 }
