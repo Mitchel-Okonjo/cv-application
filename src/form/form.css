@@ -194,3 +194,11 @@ textarea:focus {
   display: flex;
   gap: 2rem;
 }
+
+/* Education section  */
+.education-body div:nth-child(1),
+.education-body div:nth-child(2),
+.education-body div:nth-child(3) {
+  display: flex;
+  gap: 2rem;
+}
