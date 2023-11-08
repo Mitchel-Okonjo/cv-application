@@ -184,3 +184,12 @@ textarea:focus {
   padding: 0.7rem 1.5rem;
   border-radius: 0.5rem;
 }
+
+/* Projects section */
+
+.project-body div:nth-child(1),
+.project-body div:nth-child(2),
+.project-body div:nth-child(3) {
+  display: flex;
+  gap: 2rem;
+}
