@@ -12,6 +12,7 @@ function App() {
   const [activeIndex, setActiveIndex] = useState(0);
   const [formHeading, setFormHeading] = useState("Personal Details");
   const [skillsIndex, setSkillsIndex] = useState(0);
+  const [workIndex, setWorkIndex] = useState(0);
 
   const [personalValues, setPersonalValues] = useState({
     fullName: "",
@@ -40,6 +41,17 @@ function App() {
     {
       id: "languages",
       languages: ["", "", ""],
+    },
+  ]);
+
+  const [work, setWork] = useState([
+    {
+      id: 0,
+      companyName: "",
+      jobTitle: "",
+      duration: "",
+      address: "",
+      bullets: ["", "", ""],
     },
   ]);
 
@@ -106,6 +118,10 @@ function App() {
         setSkillsAndLang={setSkillsAndLang}
         skillsIndex={skillsIndex}
         setSkillsIndex={setSkillsIndex}
+        work={work}
+        workIndex={workIndex}
+        setWork={setWork}
+        setWorkIndex={setWorkIndex}
       />
       <Livesheet />
     </>

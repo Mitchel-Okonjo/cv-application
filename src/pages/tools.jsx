@@ -62,6 +62,7 @@ const PageButton = ({
   visibility,
   flag,
   color = "",
+  size = "",
   bgColor = "",
 }) => {
   const buttonStyle = {
@@ -79,7 +80,7 @@ const PageButton = ({
       {pageNav != "" && pageNav != "Back" ? pageNav : ""}
       <Icon
         path={flag === "b" ? mdiChevronLeft : mdiChevronRight}
-        size={1.5}
+        size={size ? size : 1}
         color={color}
         title={pageNav}
       />
@@ -91,6 +92,7 @@ const PageButton = ({
 const NormalButton = ({
   className,
   type,
+  id,
   content = "",
   visibility = "",
   color = "",
@@ -102,7 +104,6 @@ const NormalButton = ({
   path = "",
   size = "",
   title,
-  rotate = false,
 }) => {
   const [isHovered, setIsHovered] = useState(false);
 
@@ -119,11 +120,8 @@ const NormalButton = ({
     color: isHovered ? colorHover : color,
     backgroundColor: isHovered ? bgColorHover : bgColor,
     cursor: isHovered && "pointer",
-    padding: "0.8rem 2rem",
     border: "none",
-    width: "max-content",
     alignItems: "center",
-    borderRadius: "0.5rem",
   };
   return (
     <button
@@ -133,6 +131,7 @@ const NormalButton = ({
       style={buttonStyle}
       onMouseOver={handleMouseOver}
       onMouseOut={handleMouseOut}
+      id={id}
     >
       {content}
       {path && (

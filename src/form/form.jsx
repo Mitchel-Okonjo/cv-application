@@ -4,6 +4,7 @@ import { PersonalDetails } from "../pages/personal";
 import { Links } from "../pages/links";
 import { Skills } from "../pages/skills";
 import { PageButton } from "../pages/tools";
+import { Work } from "../pages/work";
 
 const Form = ({
   heading,
@@ -17,6 +18,10 @@ const Form = ({
   setSkillsAndLang,
   skillsIndex,
   setSkillsIndex,
+  work,
+  workIndex,
+  setWork,
+  setWorkIndex,
 }) => {
   return (
     <section className='form-section'>
@@ -59,8 +64,15 @@ const Form = ({
             setSkillsIndex={setSkillsIndex}
           />
         )}
-        {/* {activeIndex === 3 && <WorkExperience />}
-        {activeIndex === 4 && <Projects />}
+        {activeIndex === 3 && (
+          <Work
+            work={work}
+            setWork={setWork}
+            setWorkIndex={setWorkIndex}
+            workIndex={workIndex}
+          />
+        )}
+        {/* {activeIndex === 4 && <Projects />}
         {activeIndex === 5 && <Education />}
         {activeIndex === 6 && <Certifications />} */}
       </form>
