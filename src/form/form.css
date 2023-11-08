@@ -202,3 +202,10 @@ textarea:focus {
   display: flex;
   gap: 2rem;
 }
+
+/* Certifications section  */
+
+.certif-body div:nth-child(1) {
+  display: flex;
+  gap: 2rem;
+}

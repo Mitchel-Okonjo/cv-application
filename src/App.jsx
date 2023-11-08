@@ -15,6 +15,7 @@ function App() {
   const [workIndex, setWorkIndex] = useState(0);
   const [projectIndex, setProjectIndex] = useState(0);
   const [educationIndex, setEducationIndex] = useState(0);
+  const [certifIndex, setCertifIndex] = useState(0);
 
   const [personalValues, setPersonalValues] = useState({
     fullName: "",
@@ -74,6 +75,15 @@ function App() {
       name: "",
       duration: "",
       address: "",
+      bullets: ["", "", ""],
+    },
+  ]);
+
+  const [certif, setCertif] = useState([
+    {
+      id: 0,
+      name: "",
+      date: "",
       bullets: ["", "", ""],
     },
   ]);
@@ -153,6 +163,10 @@ function App() {
         educationIndex={educationIndex}
         setEducation={setEducation}
         setEducationIndex={setEducationIndex}
+        certif={certif}
+        certifIndex={certifIndex}
+        setCertif={setCertif}
+        setCertifIndex={setCertifIndex}
       />
       <Livesheet />
     </>
